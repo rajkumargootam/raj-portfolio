@@ -1,0 +1,269 @@
+body {
+  font-family: 'Raleway', sans-serif;
+}
+
+.navbar-default {
+  transition: background-color 0.5s ease-in;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.navbar-default.affix {
+  background-color: #2c3e50;
+}
+
+.navbar-default .navbar-brand, .navbar-default .navbar-nav>li>a {
+  color: #fff;
+}
+
+.navbar-default .navbar-brand:hover, .navbar-default .navbar-nav>li>a:hover {
+  color: #ddd;
+}
+
+.navbar-default .navbar-nav>li {
+  border-bottom: 5px solid transparent;
+  transition: border-color 0.5s ease-in;
+}
+
+.navbar-default .navbar-nav>li.active {
+  border-color: #27ae60;
+}
+
+.navbar-default .navbar-nav>li.active > a,
+.navbar-default .navbar-nav>li.active > a:hover {
+  background-color: transparent;
+  color: #fff;
+}
+
+.modal-backdrop.in {
+  opacity: 0.8;
+}
+
+.modal {
+  .modal-header {
+    background-color: #2c3e50;
+    color: #ecf0f1;
+    border-radius: 4px 4px 0 0;
+
+    button.close {
+      color: #ecf0f1;
+      transform: scale(2);
+    }
+  }
+
+  .modal-body, .modal-footer {
+    background-color: #bdc3c7;
+  }
+
+  .modal-footer {
+    border-radius: 0 0 4px 4px;
+    border-top: none;
+  }
+}
+
+#scroll_up {
+  width: 2em;
+  height: 2em;
+  background: rgba(0,0,0, 0.3);
+  color: white;
+  font-size: 2em;
+  border-radius: 50%;
+  line-height: 2em;
+  cursor: pointer;
+  text-align: center;
+  position: fixed;
+  bottom: 1em;
+  right: 1em;
+}
+
+#scroll_up.affix-top {
+  visibility: hidden;
+}
+
+#scroll_up.affix {
+  visibility: visible;
+}
+
+.sr-only {
+  position: relative;
+}
+
+#landing {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  height: 100vh;
+  text-align: center;
+
+  p{
+    margin: 0 0 10px;
+    text-align: center;
+    padding-top: 4em;
+    padding-right: 5%;
+    padding-left: 5%;
+  }
+
+  #landing-carousel {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    background-image: url('/images/home-bg.jpg');
+    background-repeat: no-repeat;
+
+    h1 {
+      font-size: 16vmin;
+      font-weight: 100;
+    }
+
+    h3 {
+      font-size: 8vmin;
+      font-weight: 100;
+    }
+  }
+}
+#name_div{
+  padding-top: 25vmin;
+}
+#name{
+  font-size: 12vmin;
+}
+#work {
+  background-color: #bdc3c7;
+  border: 1px solid #bdc3c7;
+  color: #2c3e50;
+  min-height: 100vh;
+  text-align: center;
+  padding: 15vh 0;
+
+  h1 {
+    font-size: 4vw;
+  }
+
+  p.tagline {
+    font-size: 2vw;
+    margin-bottom: 10vh;
+  }
+
+  .project {
+    margin-bottom: 2em;
+    position: relative;
+
+    .glyphicon {
+      display: none;
+    }
+  }
+
+  .project:hover .glyphicon {
+    display: inline-block;
+    color: #ecf0f1;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    font-size: 3em;
+  }
+
+  .project::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    transition: background-color 0.3s ease-in;
+  }
+
+  .project:hover::after {
+    background-color: rgba(30, 30, 30, 0.6);
+  }
+}
+
+#skills {
+  background-color: #8e44ad;
+  color: #ecf0f1;
+  padding: 15vh 0;
+  p.tagline {
+    font-size: 2vw;
+    text-align: center;
+    margin-bottom: 10vh;
+  }
+  h1 {
+    font-size: 8vmin;
+    margin-bottom: 8vh;
+    text-align: center;
+  }
+
+  .person {
+    border: 2px solid #ecf0f1;
+    border-radius: 6px;
+    margin-bottom: 1em;
+    padding: 1em;
+    background-color: transparent;
+    box-shadow: 6px 6px 12px rgba(255,255,255,0.3);
+    transition: all 0.3s ease-in;
+    text-align: center;
+
+    .name, .role {
+      text-align: center;
+    }
+
+    .name {
+      font-size: 1.5em;
+      font-weight: bold;
+    }
+
+    .role {
+      font-size: 1.2em;
+    }
+  }
+
+  .person:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    box-shadow: 6px 6px 18px rgba(255,255,255,0.5);
+  }
+
+  @media (min-width: 992px) {
+    .person {
+      .name {
+        text-align: left;
+      }
+
+      .role {
+        text-align: right;
+      }
+    }
+  }
+
+  @media (min-width: 1200px) {
+    .person {
+      .name, .role {
+        text-align: left;
+      }
+    }
+  }
+}
+
+#contact {
+  background-color: #16a085;
+  height: 100vh;
+
+  .form-horizontal{
+    position: relative;
+    padding-top: 30vh;
+    margin-left: 25em;
+    width: 129vmin;
+
+  }
+    textarea {
+    width: 107vmin;
+    margin-left: 80px;
+  }
+  textarea.form-control {
+    height: 3em;
+  }
+
+  #get_contact:hover {
+    text-decoration: none;
+    background-color: rgba(255,255,255,0.1);
+  }
+}
